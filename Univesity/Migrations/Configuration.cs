@@ -137,7 +137,7 @@ namespace Univesity.Migrations
                 GroupId = 3,
             });
             context.Students.AddOrUpdate(_ => _.CardNumber, new Domain.Student
-            {
+            {                
                 FirstName = "Паша",
                 LastName = "Козачок",
                 Age = 22,

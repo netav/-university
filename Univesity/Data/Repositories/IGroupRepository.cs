@@ -9,6 +9,7 @@ namespace Univesity.Data.Repositories
 {
     interface IGroupRepository
     {
-        List<Group> GetAllGroups();
+        
+        List<Group> AllGroups();
     }
 }

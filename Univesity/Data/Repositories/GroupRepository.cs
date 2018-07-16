@@ -15,17 +15,19 @@ namespace Univesity.Data.Repositories
         {
             _context = new AppDbContext();
         }
-        public List<Group> GetAllGroups()
+
+        public List<Group> AllGroups()
         {
-            var AllGroups = from u in _context.Groups
-                            .Include("Faculty")
-                            .Include("Students")
-                            select u;
-            return AllGroups.ToList();
-
-
-
-
+            var AllGroups = _context.Groups;
+            var SorterGroup = from u in AllGroups
+                                .Include("Faculty")
+                                .Include("Students")
+                                select u;
+            return SorterGroup.ToList();
         }
+
+       
+
+        
     }
 }
